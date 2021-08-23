@@ -39,9 +39,10 @@ def readLolconfig():
         configpath = getfilepath+configfile
     try:
         configread = open(configpath, 'r').read()
+        config = configread.split(':')
     except:
         mainprint("无法读取配置文件路径，请检测是否有权限读取或请打开游戏客户端")
-    config = configread.split(':')
+
     return config
 
 
